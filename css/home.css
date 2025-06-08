@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-color: #ffffff;
+  }
+  .container{
+    width: 1300px;
+    margin: auto;
+  }
+  header{
+    background-color: rgb(64, 100, 100);
+    color: #fff;
+    height: 27vh;
+  }
+.navbar {
+    margin-left: 100px;
+    background-color: rgb(64, 100, 100); /* or your preferred color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc; /* This adds the line */
+}
+
+.navbar_logo h2 {
+    margin: 0;
+    color: white;
+}
+.menu_items a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.menu_items a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.navbar_acc img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.navbar_acc {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 140px;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+    background-color: #b1b6b9;
+    transition: background 0.2s ease;
+}
+
+.navbar_acc {
+    position: relative;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #333; /* match your sidebar bg */
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.container {
+    width: 1200px; /* Adjust this width as needed */
+    margin: 0 auto; /* Center the container */
+    padding-left: 20px; /* Add padding to the left */
+}
+
+.content {
+  margin-right: 200px;
+    padding: 20px;
+    padding-top: 80px; /* adjust based on navbar height */
+}
+
+  .menu_items a{
+    margin: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .menu_items a:hover{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 7px;
+  }
+  .menu_items a:active{
+    border-bottom: 1px solid #fff;
+  }
+  .hero_section{
+    padding: 10px;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero_section .acc_txt h3{
+    font-size: 26px;
+  }
+  .hero_section .acc_txt h5{
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .hero_section .acc_details{
+    display: flex;
+    align-items: center;
+  }
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 4.5rem;
+    padding: 3.5rem;
+    margin-left: -20px;
+  }
+  .cards li{
+    padding: 1.6rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: -10px;
+    display: flex;
+    width: 300px;
+    height: 170px;
+    align-items: center;
+    gap: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border: 1px solid rgb(64, 100, 100);
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.50);
+    margin-right: 200px;
+
+  }
+  .cards li:hover{
+    transform: translateY(-10px);
+  }
+  .cards li .bx{
+    width: 5rem;
+    height: 5rem;
+    padding: 0.9rem;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(64, 100, 100);
+    background-color: rgb(219, 219, 219);
+    border-radius: 50%;
+  }
+  .cards li .info h3{
+   padding-right:300px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+  }
+  .cards li .info p{
+    color: rgb(64, 100, 100);
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .containers{
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+  }
+  .budget_content{
+    padding: 2rem;
+    display: flex;
+    margin: -40px 0 0 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .error_message{
+    background-color: #d57d7d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 650px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: none;
+  }
+  .error_message.error{
+    display: block;
+    transition: all 0.8s ease-in;
+  }
+  .ur_budget form label,
+  .ur_expenses form label{
+    color: rgb(64, 100, 100);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .ur_budget form input,
+  .ur_expenses form input
+  {
+    padding: 0.5rem 1rem;
+    width: 280px;
+    border: 1px solid rgb(220, 229, 238);
+    font-family: inherit;
+    font-size: 16px;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+  }
+
+  .ur_budget form,
+  .ur_expenses form{
+    position: relative;
+  }
+ #expensesForm {
+    margin-right: -80px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    max-width: 400px; /* or any width you want */
+}
+select {
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="10" viewBox="0 0 20 20" width="10" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 20,0 10,10"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  transition: border-color 0.3s ease;
+}
+select {
+    font-size: 0.85rem;
+}
+/* Applies to input fields and dropdown when focused */
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #4CAF50; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle glow */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: base styles for consistency */
+input,
+select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow:  0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+#expensesForm select {
+    width: 150px;
+}
+
+#expensesForm input[name="exp_name"] {
+    flex: 1;
+    min-width: 150px;
+}
+
+#expensesForm input[name="exp_price"] {
+    width: 180px;
+}
+
+#expensesForm > div {
+    width: 100%;
+}
+
+#expensesForm button.btn {
+    width: 100%;
+}
+
+  .budget_content .btn{
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(64, 100, 100);
+  }
+  .budget_content .btn:active{
+    transform: scale(0.98);
+  }
+  .table_content{
+    width: 100%;
+    padding: 2rem;
+    background-color: #d9d9da;
+    margin: -.60rem 3.5rem;
+    border-radius: 5px;
+  }
+
+  .tbl_tr_content {
+  display: flex; /* likely your current setup */
+  align-items: center;
+  gap: 10px; /* optional to space items */
+}
+
+.tbl_tr_content li {
+  flex: 1; /* makes each li take equal space */
+  white-space: nowrap; /* prevent text wrapping */
+  overflow: visible; /* make sure children can overflow */
+  position: relative; /* for z-index */
+}
+
+.tbl_tr_content li:last-child {
+  flex: 2; /* make last li wider to fit date + button */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: visible;
+}
+
+.edit-btn {
+  position: relative;
+  z-index: 10;
+  padding: 4px 8px;
+  background-color: #2c7;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.delete-btn {
+  position: relative;
+  z-index: 10;
+  padding: 4px 8px;
+  background-color: rgb(221, 21, 21);
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+        .saving-goals-container {
+            width: 90%;
+            max-width: 960px;
+            margin: 40px 0 0 120px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .saving-goals-header {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .saving-goals-header h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .saving-goals-header p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .saving-goals-form-wrapper {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        #goal-form-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            grid-column: 1 / -1; /* Span all columns */
+            justify-content: flex-start;
+        }
+
+        .save-goal-btn,
+        .cancel-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .save-goal-btn {
+            background-color: rgb(64, 100, 100); /* Blue */
+            color: white;
+        }
+
+        .save-goal-btn:hover {
+            background-color: #1e7e34;
+        }
+
+        #goal-form-buttons .cancel-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+    display: none; /* Initially hidden */
+}
+
+#goal-form-buttons .cancel-btn:hover {
+    background-color: #c82333;
+}
+
+        .saved-goals-section {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .saved-goals-section h4 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .saved-goals-list {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            gap: 20px;
+        }
+
+        .saved-goal-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eee;
+            width: calc(50% - 10px); /* Each card takes up roughly 50% of the container width with spacing */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        @media (max-width: 600px) {
+            .saved-goal-card {
+                width: 100%; /* On smaller screens, make cards take full width */
+            }
+        }
+
+        .saved-goal-card .goal-name {
+            font-weight: bolder;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        .saved-goal-card .target-amount,
+        .saved-goal-card .saved-amount {
+          font-weight: bold;
+            font-size: 16px;
+            color: black;
+            margin-bottom: 6px;
+        }
+
+        .progress-container {
+            position: relative; /* For absolute positioning of the text */
+            margin-top: 20px;
+        }
+
+        .progress-text-above {
+            position: absolute;
+            top: -1.5em; /* Adjust as needed for spacing */
+            left: 0;
+            font-size: 14px;
+            color: #303030;
+        }
+
+        .progress-bar-container {
+            background-color: #f0f0f0;
+            border-radius: 6px;
+            height: 10px;
+            overflow: hidden;
+            margin-top: 5px; /* Adjust spacing between text and bar */
+        }
+
+        .progress-bar {
+            background-color: #7f32d8; /* Blue */
+            height: 100%;
+            border-radius: 6px;
+            width: 0%; /* Will be dynamically set */
+        }
+
+        .goal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .edit-goal-btn,
+        .delete-goal-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-goal-btn {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+
+        .edit-goal-btn:hover {
+            background-color: #1e7e34;
+        }
+
+        .delete-goal-btn {
+            background-color: #dc3545; /* Red */
+            color: white;
+        }
+
+        .delete-goal-btn:hover {
+            background-color: #c82333;
+        }
+
+    .notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 128, 0, 0.8); /* Green background */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: none; /* Initially hidden */
+    text-align: center; /* Center text */
+}
+
+.notification.visible {
+    display: block; /* Show when visible class is added */
+}
+
+
+.section-title {
+    margin-top: -20px;
+    margin-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.report-meta {
+    font-size: 14px;
+    color: #0000;
+    margin-bottom: 20px;
+}
+.report-section {
+    margin-left: 130px;
+    margin-bottom: 30px;
+}
+.section-heading {
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.metrics-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.metric-card {
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+}
+.metric-label {
+    font-size: 14px;
+    color: black;
+}
+.metric-value {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.summary-table th,
+.summary-table td {
+    color:#000;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+.chart-placeholder {
+    font-style: italic;
+    color: black;
+    margin-top: 10px;
+}
+#insights {
+    margin-top: 120px;
+}
+.insight-list {
+    color: #000000;
+    padding-left: 20px;
+}
+.insight-list li {
+    margin-bottom: 5px;
+}
+/* Expense Breakdown section - side by side layout */
+.expense-flex-container {
+    width: 100%; /* Increased from 70% to give more space */
+    height: auto; /* Allow height to adjust to content */
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; /* Increased gap for better spacing */
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Prevent wrapping to keep side-by-side */
+}
+
+.summary-table {
+    flex: 1 1 450px; /* Allow the table to grow and shrink */
+    border-collapse: collapse;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 300px; /* Ensure minimum width */
+}
+
+#expensePieChart {
+    flex: 0 0 400px !important; /* Use !important to override inline styles */
+    width: 400px !important;
+    height: 350px !important;
+    max-width: 400px !important;
+    border-radius: 12px;
+    background: #fafafa;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Add spacing between sections to prevent overlap */
+.report-section {
+    margin-bottom: 3rem;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .expense-flex-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto; /* Allow height to adjust */
+    }
+    
+    #expensePieChart {
+        flex: none; /* Remove flex properties */
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+        margin: 0 auto; /* Center the chart */
+    }
+}
+
+/* Saving Goals section - side by side layout */
+.saving-goals-flex-container {
+    width: 100%; /* Increased from 70% to give more space */
+    height: auto; /* Allow height to adjust to content */
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Prevent wrapping to keep side-by-side */
+    margin-top: 2rem; /* Add space between sections */
+}
+
+.saving-goals-table {
+    flex: 1 1 450px; /* Allow the table to grow and shrink */
+    border-collapse: collapse;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 300px; /* Ensure minimum width */
+}
+
+#savingGoalsPieChart {
+    flex: 0 0 400px !important; /* Use !important to override inline styles */
+    width: 400px !important;
+    height: 350px !important;
+    max-width: 400px !important;
+    border-radius: 12px;
+    background: #fafafa;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Responsive stacking only on very small screens */
+@media (max-width: 600px) {
+    .saving-goals-flex-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: auto; /* Allow height to adjust */
+    }
+    
+    #savingGoalsPieChart {
+        flex: none; /* Remove flex properties */
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+        margin: 0 auto; /* Center the chart */
+    }
+}
+/*style for download report button*/
+.download-report-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 430px;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.download-report-btn:hover,
+.download-report-btn:focus {
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    box-shadow: 0 6px 20px rgba(101, 83, 245, 0.7);
+    outline: none;
+}
+
+.download-report-btn .icon-download {
+    flex-shrink: 0;
+    stroke: white;
+}

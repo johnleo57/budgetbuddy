@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",  // Debug with Edge instead of Chrome
+            "request": "launch",
+            "name": "Launch Edge on localhost:3000",
+            "url": "http://localhost:3000",  // Your local server port
+            "webRoot": "${workspaceFolder}",
+            "userDataDir": false  // Prevents Edge profile conflicts
+        }
+    ]
+}
